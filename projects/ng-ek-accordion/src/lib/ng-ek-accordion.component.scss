@@ -1,0 +1,46 @@
+.ng-ek-accordion-container {
+  .btn-ek-primary {
+    background-color: transparent;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px 10px 0 0;
+    font-weight: 400;
+    border: 1px solid #e7ecf0;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s ease-in-out;
+
+    svg,
+    i {
+      transition: all 0.3s ease;
+    }
+  }
+
+  .ng-ek-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+
+    border: 1px solid #e7ecf0;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+  }
+
+  &.show {
+    .ng-ek-accordion-content {
+      max-height: 1000px;
+      transition: all 1s ease;
+    }
+
+    .btn-ek-primary {
+      background-color: #e8f2fb;
+
+      svg,
+      i {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
